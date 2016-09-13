@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="panel panel-default" ng- ng-init="getBook()">
+    <div class="panel-heading">
+        <h3 class="panel-title">Book Store</h3>
+    </div>
+    <div class="panel-body">
+       <div class="row">
+         <div ng-repeat="book in books">
+            <div class="col-md-3">
+               {{book.title}}
+                <p>{{book.description}}</p>
 
-</body>
-</html>
+                <div class="col-md-6">
+                    <img src="{{book.image_url}}">
+                </div>
+
+            </div>
+         </div>
+       </div>
+    </div>
+</div>
